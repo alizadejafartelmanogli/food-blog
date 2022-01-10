@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/blog.css">
+    <title>Title</title>
+</head>
+<body onload="addPost()">
+<div class="container">
+    <div class="row">
+        <div class="col">
+            image
+        </div>
+        <div class="col-11">
+            <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+                <a class="me-3 py-2 text-dark text-decoration-none" href="/">Главная</a>
+                <a class="me-3 py-2 text-dark text-decoration-none" href="/blog.html">Блог</a>
+                <a class="me-3 py-2 text-dark text-decoration-none" href="/users.html">Пользователи</a>
+                <a class="me-3 py-2 text-dark text-decoration-none" href="/my_posts.html">Мои рецепты</a>
+                <a class="me-3 py-2 text-dark text-decoration-none" href="/add-post.html">Добавить рецепт</a>
+                <a class="me-3 py-2 text-dark text-decoration-none" href="/registration">Зарегистрироваться</a>
+                <a class="me-3 py-2 text-dark text-decoration-none" href="/login">У меня есть аккаунт</a>
+                <div class="me-3 py-2 text-dark text-decoration-none">
+                    <form action="/logout" method="POST">
+                        <button type="submit">Выйти</button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="alert alert-info mt-2">
+    <form>
+        <label>Название блюда:</label>
+        <input id="header" type="text" class="form-control"><br>
+        <label>Анонс:</label>
+        <input id="anons" type="text" class="form-control"><br>
+        <label>Текст рецепта:</label>
+        <textarea id="text" type="text" class="form-control"></textarea><br>
+        <input type="button" value="Опубликовать" onclick="getPostParameter()" class="btn btn-success">
+    </form>
+</div>
+<script src="js/post.js"></script>
+</body>
+</html>

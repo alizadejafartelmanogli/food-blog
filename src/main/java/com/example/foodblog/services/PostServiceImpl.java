@@ -26,4 +26,11 @@ public class PostServiceImpl implements BaseService<Post> {
     public void add(Post post) {
         postRepository.save(post);
     }
+
+    @Override
+    public void remove(Post post) {
+        postRepository.delete(post);
+    }
+
+
 }

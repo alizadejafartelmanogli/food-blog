@@ -7,4 +7,6 @@ public interface BaseService<T> {
     List<T> getAll();
 
     void add(T t);
+
+    void remove(T t);
 }

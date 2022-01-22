@@ -17,7 +17,6 @@ async function getAllPosts(){
 
             let details = document.createElement('a')
             details.href = "/post.html?id="+posts[i].id
-            //"http://localhost:8080/api/posts/"+posts[i].i
             details.textContent = "Детальнее"
             post1.appendChild(details)
         }

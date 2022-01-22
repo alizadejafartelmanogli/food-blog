@@ -11,7 +11,7 @@ function getPostParameter(){
 
 async function addPost(){
     let post = getPostParameter()
-    let response = await fetch("http://localhost:8080/api/posts/add", {
+    let response = await fetch('http://localhost:8080/api/posts/add', {
         method: 'POST',
         headers:{
             'Content-Type':'application/json;charset=utf-8'
@@ -19,5 +19,5 @@ async function addPost(){
         body: JSON.stringify(post)
     })
     if (response.ok)
-        window.location = "http://localhost:8080/blog.html";
+        window.location = 'http://localhost:8080/blog.html'
 }

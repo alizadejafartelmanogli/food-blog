@@ -18,12 +18,17 @@ public class UserServiceImpl implements BaseService<User> {
         return userRepository.findAll();
     }
 
-    public User getOne(String email) {
+    public User getByEmail(String email) {
         return userRepository.findByEmail(email);
     }
 
     @Override
     public void add(User user) {
         userRepository.save(user);
+    }
+
+    @Override
+    public void remove(User user) {
+        userRepository.delete(user);
     }
 }

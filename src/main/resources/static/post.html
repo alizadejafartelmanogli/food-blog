@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
-    <title>Title</title>
+    <title>Посты</title>
 </head>
 <body onload="getPostById(getIdClient())">
 <div class="container">
@@ -19,8 +19,8 @@
                 <a class="me-3 py-2 text-dark text-decoration-none" href="/users.html">Пользователи</a>
                 <a class="me-3 py-2 text-dark text-decoration-none" href="/my_posts.html">Мои рецепты</a>
                 <a class="me-3 py-2 text-dark text-decoration-none" href="/add-post.html">Добавить рецепт</a>
-                <a class="me-3 py-2 text-dark text-decoration-none" href="/registration">Зарегистрироваться</a>
-                <a class="me-3 py-2 text-dark text-decoration-none" href="/login">У меня есть аккаунт</a>
+                <a class="me-3 py-2 text-dark text-decoration-none" href="/registration.html">Зарегистрироваться</a>
+                <a class="me-3 py-2 text-dark text-decoration-none" href="/login.html">У меня есть аккаунт</a>
                 <div class="me-3 py-2 text-dark text-decoration-none">
                     <form action="/logout" method="POST">
                         <button type="submit">Выйти</button>
@@ -32,17 +32,19 @@
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="col">
-            <div class="post-head"></div>
+    <div class="alert alert-info mt-2">
+        <div class="row">
+            <div class="col">
+                <div class="post-head"></div>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-6">
-            <div class="post-text"></div>
-        </div>
-        <div class="col-6">
-            <div class="post-image"></div>
+        <div class="row">
+            <div class="col-6">
+                <div class="post-text"></div>
+            </div>
+            <div class="col-6">
+                <div class="post-image"></div>
+            </div>
         </div>
     </div>
 </div>

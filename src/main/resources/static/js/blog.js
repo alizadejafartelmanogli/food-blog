@@ -22,23 +22,3 @@ async function getAllPosts(){
         }
     }
 }
-
-function getIdClient(){
-    let searchParams = new URLSearchParams(document.location.search);
-    return searchParams.get("id");
-}
-
-async function getPostById(id){
-    let response = await fetch("http://localhost:8080/api/posts/"+id)
-    let post = await response.json()
-
-    let postHead = document.querySelector('.post-head')
-    let postHead1 = document.createElement('h3')
-    postHead1.textContent = post.header
-    postHead.appendChild(postHead1)
-
-    let postText = document.querySelector('.post-text')
-    let postText1 = document.createElement('p')
-    postText1.textContent = post.text
-    postText.appendChild(postText1)
-}

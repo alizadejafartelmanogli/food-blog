@@ -33,6 +33,7 @@
 
 <div class="container">
     <div class="alert alert-info mt-2">
+
         <div class="row">
             <div class="col">
                 <div class="post-head"></div>
@@ -46,8 +47,21 @@
                 <div class="post-image"></div>
             </div>
         </div>
+        <form>
+            <label>Введите ваш комментарий:</label>
+            <input id="comment" type="text" class="form-control"><br>
+            <input type="button" value="Добавить" onclick="addComment()" class="btn btn-success">
+        </form>
+        <h6>Комментарии:</h6>
+        <div class="class=alert alert-info mt-2 mb-5">
+            <div class="comment-user"></div>
+            <div class="comment-text"></div>
+        </div>
+
     </div>
+
+
 </div>
-<script src="js/blog.js"></script>
+<script src="js/post.js"></script>
 </body>
 </html>

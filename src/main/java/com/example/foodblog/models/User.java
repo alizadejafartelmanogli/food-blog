@@ -9,7 +9,7 @@ public class User extends AbstractModel {
     private String name;
     private String email;
     private String password;
-    @ManyToMany
+    @ManyToMany (fetch = FetchType.LAZY)
     private List<Post> posts;
 
     public User() {

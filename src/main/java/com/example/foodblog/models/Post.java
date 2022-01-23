@@ -17,6 +17,9 @@ public class Post extends AbstractModel {
     private List<String> comments;
     @ElementCollection
     private List<Double> ratings;
+    @ManyToMany
+    private List<User> users;
+
 
     public Post() {
     }
@@ -67,5 +70,13 @@ public class Post extends AbstractModel {
 
     public void setRatings(List<Double> ratings) {
         this.ratings = ratings;
+    }
+
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
     }
 }

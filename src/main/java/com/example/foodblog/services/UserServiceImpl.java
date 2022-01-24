@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements BaseService<User> {
@@ -18,7 +19,7 @@ public class UserServiceImpl implements BaseService<User> {
         return userRepository.findAll();
     }
 
-    public User getByEmail(String email) {
+    public Optional<User> getByEmail(String email) {
         return userRepository.findByEmail(email);
     }
 
